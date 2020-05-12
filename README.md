@@ -1,11 +1,14 @@
 # Desarrollo de la Pagina de Eco Villa Real
+
+El siguiente documento contiene eventos y el proceso de desarrollo de la pagina para el Residencial Eco Villa Real.
+
 ## Mantenimiento Inicial del Sitio
 1. Se elimino el plugin llamado Jetpack, el cual no permitía que wp funcionara.
 2. Se realizo un backup del sitio, este esta ubicado en una carpeta de GDrive.
 3. Se actualizo a la versión mas reciente de wordpress (5.4.1).
 4. Se actualizaron todos los plugins existentes.
 
-## Personalización
+## Personalización, Desarrollo y Plugins Utilizados
 1. Se instalo el tema de Astra.
 2. Se instalo el plugin Astra-Starter Templates.
 3. Se importo el template "outdoor" adventure.
@@ -30,3 +33,6 @@ Poco después de terminar el desarrollo del sitio, el modulo de reservaciones pa
 4. Según GoDaddy, una posible solución seria tanto actualizar el plan de hosting a uno mas reciente con cPannel lo cual de nuevo requiere de costo adicional.
 ### Actualizacion del Hosting
 Tras conversar con un agente de soporte de GoDaddy, se llego al acuerdo de mejorar el hosting antiguo a uno actualizado con acceso a cPannel. A pesar del costo de entrada para un mes, se utilizara el saldo restante del plan previo lo cual incremento el plan por 6 meses en total. A este tipo de problemas se les conoce como una deuda tecnológica (Technical debt) donde se les esta dando soporte a un servicio, tecnología o en este caso un servidor desactualizado, antiguo o deprecado donde este impide la evolución del producto de software tanto para el cliente como para el desarrollador.
+
+![image-20200512155023338](README.assets/image-20200512155023338.png)
+
