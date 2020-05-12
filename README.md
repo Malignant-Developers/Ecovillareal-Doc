@@ -28,3 +28,5 @@ Poco después de terminar el desarrollo del sitio, el modulo de reservaciones pa
 2. Desactivar las notificaciones por correo del plugin en caso de que el servidor de correo estuviera bloqueando dichas transacciones.
 3. Según GoDaddy, una posible solución seria desactivar firewall del sitio pero para tener acceso a esto fue necesario adquirir una licencia especial de seguridad. (No soluciono el problema)
 4. Según GoDaddy, una posible solución seria tanto actualizar el plan de hosting a uno mas reciente con cPannel lo cual de nuevo requiere de costo adicional.
+### Actualizacion del Hosting
+Tras conversar con un agente de soporte de GoDaddy, se llego al acuerdo de mejorar el hosting antiguo a uno actualizado con acceso a cPannel. A pesar del costo de entrada para un mes, se utilizara el saldo restante del plan previo lo cual incremento el plan por 6 meses en total.
