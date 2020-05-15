@@ -34,5 +34,17 @@ Poco después de terminar el desarrollo del sitio, el modulo de reservaciones pa
 ### Actualizacion del Hosting
 Tras conversar con un agente de soporte de GoDaddy, se llego al acuerdo de mejorar el hosting antiguo a uno actualizado con acceso a cPannel. A pesar del costo de entrada para un mes, se utilizara el saldo restante del plan previo lo cual incremento el plan por 6 meses en total. A este tipo de problemas se les conoce como una deuda tecnológica (Technical debt) donde se les esta dando soporte a un servicio, tecnología o en este caso un servidor desactualizado, antiguo o deprecado donde este impide la evolución del producto de software tanto para el cliente como para el desarrollador.
 
-![image-20200512155023338](README.assets/image-20200512155023338.png)
+![image-20200512161842625](README-images/host-removal.png)
 
+### El nuevo dominio y plan de Hospedaje
+
+Debido a la alta espera de GoDaddy se opto por adquirir por un nuevo dominio llamdo resecovillareal.com en el cual es realizaria la misma configuracion que el sitio original, aunque esto requiere de pasar varios "features" adquiridos para el dominio original se cree que es la mejor solucion. Con el nuevo cPannel se tiene un mejor control sobre el sitio, lo cual ayudara en la depuracion del sitio especialmente sobre el uso de recursos del sitio.
+
+![image-20200514215412163](README-images/image-20200514215412163.png)
+
+Con respecto a la configuracion del sitio, se esta siguiendo el sitio original como base para la elaboracion de este. Este fue un proceso sencillo puesto que mediante la recuperación de la base de datos toda la configuracion previa es trasladada al nuevo sitio, entre los erroes que se tuvieron que resolver fueron los siguientes:
+
+- Configurar el wordpress a utilizar la nueva base de datos configurando el archivo `wp-config.php` para apuntar hacia la nueva base de datos.
+  ![image-20200514215814664](README-images/image-20200514215814664.png)
+- En el momento de acceder a la pagina esta se encontraba redireccionando al usuario al dominio original osea ecovillareal.com, esto se arreglo mediante las siguientes lineas de codigo.
+  ![image-20200514220020374](README-images/image-20200514220020374.png)
