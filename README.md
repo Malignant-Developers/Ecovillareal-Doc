@@ -21,13 +21,13 @@ El siguiente documento contiene eventos y el proceso de desarrollo de la pagina 
 9. Se creo el modulo de booking.
 10. Se modificaron los correos para mostrar las áreas reservadas.
 11. Se elimino la opción de reservar el mismo día.
-12. Se actualizo el panel de administracipón para mostrar una vista semanal y diaria de las reservaciones.
-13. Se configuro la funcionalidad para la aprobación o negación remota de las reservaciones, esto enruta hacia una pagina especial donde se confirma la acción tomada. Esto es realizado mediante el correo enviado a la administración una vez se crea una nueva aprovación.
+12. Se actualizo el panel de administración para mostrar una vista semanal y diaria de las reservaciones.
+13. Se configuro la funcionalidad para la aprobación o negación remota de las reservaciones, esto enruta hacia una pagina especial donde se confirma la acción tomada. Esto es realizado mediante el correo enviado a la administración una vez se crea una nueva aprobación.
 ## Recuperación del Sitio
-Aproximadamente a las 12 am uno de los integrantes del equipo de desarrollo encontró la pagina caida, tras inspección del suceso se encontró que la base de datos bajo la cual el wordpress fue instalado había sido borrada. Entre las posibles causas se descarto un ataque de inyección de SQL y se sospecha que un usuario malicioso con credenciales al panel de Godaddy llego a borrarla. Aun así se contaba con un backup completo del sitio y este fue restaurado en aproximadamente 10 minutos.
+Aproximadamente a las 12 am uno de los integrantes del equipo de desarrollo encontró la pagina caída, tras inspección del suceso se encontró que la base de datos bajo la cual el wordpress fue instalado había sido borrada. Entre las posibles causas se descarto un ataque de inyección de SQL y se sospecha que un usuario malicioso con credenciales al panel de Godaddy llego a borrarla. Aun así se contaba con un backup completo del sitio y este fue restaurado en aproximadamente 10 minutos.
 ### Reparación del Hosting
-Poco después de terminar el desarrollo del sitio, el modulo de reservaciones paro de funcionar o más bien este se quedaba cargando sin llegar a completar entre otros sintomas se volvio imposible modificar el sitio e instalar, actualizar y remover plugins en el sitio de wordpress. El unico codigo de error o indicio que proporcionaba el sitio era un 503, se probaron multiples soluciones entre las cuales se intento:
-1. Remover todos los plugins a excepción del plugin de reservación para averiguar si existía algún conflicto.
+Poco después de terminar el desarrollo del sitio, el modulo de reservaciones paro de funcionar o más bien este se quedaba cargando sin llegar a completar entre otros síntomas se volvió imposible modificar el sitio e instalar, actualizar y remover plugins en el sitio de wordpress. El único código de error o indicio que proporcionaba el sitio era un 503, se probaron múltiples soluciones entre las cuales se intento:
+1. Remover todos los plugins a excepción del plugin de preservación para averiguar si existía algún conflicto.
 2. Desactivar las notificaciones por correo del plugin en caso de que el servidor de correo estuviera bloqueando dichas transacciones.
 3. Según GoDaddy, una posible solución seria desactivar firewall del sitio pero para tener acceso a esto fue necesario adquirir una licencia especial de seguridad. (No soluciono el problema)
 4. Según GoDaddy, una posible solución seria tanto actualizar el plan de hosting a uno mas reciente con cPannel lo cual de nuevo requiere de costo adicional.
@@ -38,13 +38,13 @@ Tras conversar con un agente de soporte de GoDaddy, se llego al acuerdo de mejor
 
 ### El nuevo dominio y plan de Hospedaje
 
-Debido a la alta espera de GoDaddy se opto por adquirir por un nuevo dominio llamdo resecovillareal.com en el cual es realizaria la misma configuracion que el sitio original, aunque esto requiere de pasar varios "features" adquiridos para el dominio original se cree que es la mejor solucion. Con el nuevo cPannel se tiene un mejor control sobre el sitio, lo cual ayudara en la depuracion del sitio especialmente sobre el uso de recursos del sitio.
+Debido a la alta espera de **GoDaddy** **se opto** por adquirir por un nuevo dominio *llamado* **resecovillareal.com** en el cual es realizaria la misma configuración que el sitio original, aunque esto requiere de pasar varios "**features"** adquiridos para el dominio original se cree que es la mejor solución. Con el nuevo **cPannel** se tiene un mejor control sobre el sitio, lo cual ayudara en la depuración del sitio especialmente sobre el uso de recursos del sitio.
 
 ![image-20200514215412163](README-images/image-20200514215412163.png)
 
-Con respecto a la configuracion del sitio, se esta siguiendo el sitio original como base para la elaboracion de este. Este fue un proceso sencillo puesto que mediante la recuperación de la base de datos toda la configuracion previa es trasladada al nuevo sitio, entre los erroes que se tuvieron que resolver fueron los siguientes:
+Con respecto a la configuración del sitio, se esta siguiendo el sitio original como base para la elaboración de este. Este fue un proceso sencillo puesto que mediante la recuperación de la base de datos toda la configuración previa es trasladada al nuevo sitio, entre los errores que se tuvieron que resolver fueron los siguientes:
 
 - Configurar el wordpress a utilizar la nueva base de datos configurando el archivo `wp-config.php` para apuntar hacia la nueva base de datos.
   ![image-20200514215814664](README-images/image-20200514215814664.png)
-- En el momento de acceder a la pagina esta se encontraba redireccionando al usuario al dominio original osea ecovillareal.com, esto se arreglo mediante las siguientes lineas de codigo.
+-  En el momento de acceder a la pagina esta se encontraba redireccionando al usuario al dominio original osea ecovillareal.com, esto se arreglo mediante las siguientes lineas de codigo.
   ![image-20200514220020374](README-images/image-20200514220020374.png)
