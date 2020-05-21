@@ -46,5 +46,14 @@ Con respecto a la configuración del sitio, se esta siguiendo el sitio original 
 
 - Configurar el wordpress a utilizar la nueva base de datos configurando el archivo `wp-config.php` para apuntar hacia la nueva base de datos.
   ![image-20200514215814664](README-images/image-20200514215814664.png)
--  En el momento de acceder a la pagina esta se encontraba redireccionando al usuario al dominio original osea ecovillareal.com, esto se arreglo mediante las siguientes lineas de codigo.
+-  En el momento de acceder a la pagina esta se encontraba redireccionando al usuario al dominio original osea ecovillareal.com, esto se arreglo mediante las siguientes lineas de código.
   ![image-20200514220020374](README-images/image-20200514220020374.png)
+
+## Bajos Recursos
+
+El nuevo servidor parece contar con ciertas especificaciones técnicas bajas, especialmente la memoria física o RAM donde esta llega al máximo de su capacidad con actividades consideradas de baja intensidad para el sistema un claro ejemplo de esto se dio durante la personalización del sitio cuando se estaba subiendo un icono del residencial para que sea usado en la barra de navegación. Acá los recursos de entrada y salida (lectura y escritura en el disco duro del servidor) y la memoria física del servidor llegaron al máximo de su capacidad. 
+
+Este impidió hacer una actividad critica la cual radica en los respaldos del sitio completo, que a pesar de ellos se soluciono utilizando la herramienta de respaldo proporcionada por GoDaddy
+
+![image-20200521053438560](README-images/image-20200521053438560.png)
+
